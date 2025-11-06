@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <span class="logo"><span class="yellow">JavaScript</span> Meme Maker</span>
+  <div class="nav-links">
+    <a href="/" class="nav-btn">Home</a>
+
+    <% if (isAuthenticated) { %>
+      <a href="/user/share-meme" class="nav-btn">Share a Meme</a>
+      <form action="/auth/logout" method="POST" style="display:inline;">
+        <button type="submit" class="nav-btn">Logout</button>
+      </form>
+    <% } else { %>
+      <a href="/auth/login" class="nav-btn">Login</a>
+    <% } %>
+  </div>
+</nav>
